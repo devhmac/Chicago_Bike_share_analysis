@@ -9,7 +9,9 @@ SQL - Validation, and exploratory, impromptu analysis.
 Tableau for Visualization and Dashboard creation. 
 
 <div align="center"> 
-## Tableau Dashboard linked here 
+  
+## [Tableau Dashboard linked here](https://public.tableau.com/app/profile/devmac/viz/ChicagoBikeShareAnalysis/BikeUsageDashboard) 
+  
 </div>
 
 ## Business Case
@@ -130,7 +132,7 @@ Additional data should be collected on the reason for Casual rider reduction dur
 - In July, casual and member rides are almost neck and neck, this would be an excellent opportunity to try to convert some of the high casual users to members.
 - Member riders are much higher users in the colder months, approximating that the segment is using the service less for pleasure/leisure acitivies, and more as an effective form of transportation, particularly in these months where outdoor activities are less desirable.
 
-### Overall Trends
+## Overall Trends
 
 Member riders take shorter rides, peaking Monday - Friday during commuting hours. Members continue to ride into the colder months at a much higher rate than the casual counterparts. 
 
