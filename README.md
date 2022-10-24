@@ -44,17 +44,15 @@ We completed our data cleaning and processing work in Python, with the pandas an
 After importing our data we explored each set to confirm column names and data types were compatible. Once confirmed, we merged all 12 sets.
 
 <img src="https://user-images.githubusercontent.com/52307383/197649747-ee990681-7f89-4e3c-b492-1fb36247a9e3.png">
+
 ## Cleaning
 
 - Started with confirming the data types of our columns.
 <img src="https://user-images.githubusercontent.com/52307383/197649800-944ea2fb-e181-48a4-aad8-5cdaeb899084.png">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/639be36c-95e9-478c-9b91-6bc1f7db1399/Untitled.png)
-<img src="">
 - First, we checked for and dropped duplicate rows (there were none). We then noted that start and end times were objects. We translated them to datetime to perform calculations on them for additional data points.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f179987-f0ac-4fbc-9507-56f75645eb4c/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650034-d39d997b-1b5a-422e-a906-88417be8d4f3.png">
 
 Next we added 3 new columns to our dataset, which will provide additional value during the analysis process. 
 
@@ -63,27 +61,23 @@ Next we added 3 new columns to our dataset, which will provide additional value 
 - Added “Month” column, tracking the month of each ride.
 - Calculated the trip duration of each ride using the start and end date column of each row. We decided to store this in minutes, rounded to 2nd decimal point.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/298d16c3-2ef2-40e5-9e46-551727be7cb9/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650061-7e56e96e-b463-44e9-94e9-90f4b1853707.png">
 
 The Jupyter notebook Deepnote allows for the use of SQL on dataframes, which allows for an incredibly efficient combo of the two languages. We leveraged this to perform a few quick data validation queries to check if our set had any incomplete or corrupted trip data. 
 
 See a few of these queries below;
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/947f08f6-349a-477e-87bb-42ab68490b14/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650105-ce0e522b-1224-4786-b8e6-9dedb968e698.png">
 
 Luckily all rows appeared to have complete trip data. Many rows were missing station names and ID’s, but even in those cases Lat and Long of both start and end locations were still recorded. 
 
 Next, we checked the trip duration, to confirm our trip lengths made sense contextually. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1da1da88-5c35-4dfe-9ea7-c979d8ed7013/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650143-9f3fad20-774a-4924-8fbd-fb5234db1ff8.png">
 
 We found 110578 trips with a duration below 1 minute, which seemed potentially problematic. After some research on Divvy’s data capture techniques, we found they recommend that trips under 1 minute be considered false starts of errors, so we dropped these from our set. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd54d7eb-81c8-470c-b772-44dd53873634/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650167-230ad308-5f5a-4dfa-be72-1e9d3dd50e63.png">
 
 Now confident in our data, I split our set in two, one with location data removed for a customer-focused analysis, and the other for a future project to analyze location-based ridership trends and geo-mapping. 
 
@@ -91,26 +85,22 @@ Now confident in our data, I split our set in two, one with location data remove
 
 Focusing our analysis on the difference between membership and casual rider use trends uncovered to some interesting findings. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e33a1674-32fd-4b5c-ac38-52b101a4b6d2/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650230-abbc861f-abdd-46c0-b3c3-f0897aa1df76.png">
 
 - Of the total 5 million trips, 57.79% were taken by members (2,917,645).
 - More interesting, however, despite accounting for the majority of all rides, member ride only account for 42.34% of the total time spent riding bikes. 626,269.6 of 1,479,144 hours annually. Let's dig into this trend further.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b971137-5c41-40e5-bf6c-40157cea41a5/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650287-3dc3c7ca-9f8e-4936-bd1e-60ae6ea2ad6b.png">
 
 - After further analysis, on average the length of casual rider trips are almost double that of member rides.
 
 This is interesting in addition to the result above. It adds further context\ further context to why members are the more profitable user group. Despite using the product more frequently than casual riders they are on the bikes less per trip, enabling the bikes to be more readily available for the next user.  
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59c15d1c-8f5e-494a-89ee-d9e82d984227/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650345-b1ec62aa-aa20-4cb8-9244-9c81c7199fc0.png">
 
-A quick analysis of the types of bikes ridden over the ast year showed the docked bikes were the least popular, actually accounting for no rides in the member segment. Despite being relatively close, members seem to lean towards the classic bikes, where as casual riders prefer electric. 
+A quick analysis of the types of bikes ridden over the last year shows the docked bikes were the least popular, and actually accounting for no rides in the member segment. Despite being relatively close, members seem to lean towards the classic bikes, where as casual riders prefer electric. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e89e7b5f-4153-4ee3-842c-24a83e3e1b03/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650372-593fc548-f6d9-4a69-811c-896b57f697ad.png">
 
 During weekdays (Mon - Fri) casual riders take significantly more trips than casual users. 
 
@@ -120,8 +110,7 @@ This pattern is biased towards the start of the week, as it goes on the gap betw
 
 A trend is emerging in the visualizations above. With casual riders taking longer trips on average, and exceeding member trips on weekends, I predict these rides represent leisure activities - compared to the member segment taking expedient trips on weekdays, which seems to represent commuting behaviour.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ecf5cbb6-554e-4303-a1b1-4777b4844c1e/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650481-4ffbddd9-7478-4c50-b83b-6e3e7eb21c30.png">
 
 When comparing trips to time of day, our above thesis is reinforced. 
 
@@ -130,8 +119,7 @@ When comparing trips to time of day, our above thesis is reinforced.
 
 User interviews should be conducted to confirm the different use patters, but the above plot clearly demonstrates the difference between the casual rides and the more commute focused member rides. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8d8371ed-31e6-4836-b10d-f463d8a6b406/Untitled.png)
-<img src="">
+<img src="https://user-images.githubusercontent.com/52307383/197650537-0dc3626d-8bef-4174-bc6e-aa18e7ff9855.png">
 
 Unsurprisingly, we see total rides are much higher in the warmer months. In the off months, Oct - April, we see the biggest gaps between segments. The largest differences being Oct-Dec. 
 
