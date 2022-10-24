@@ -8,7 +8,7 @@ SQL - Validation, and exploratory, impromptu analysis.
 
 Tableau for Visualization and Dashboard creation. 
 
-## Tableau Dashboard linked here 
+<div align="center"> ## Tableau Dashboard linked here </div>
 
 ## Business Case
 
