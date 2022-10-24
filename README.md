@@ -2,11 +2,11 @@
 
 This project utilized various technologies to clean, manipulate, transform, analyze and finally visualize a bike share ridership dataset. 
 
-Python - Cleaning, transforming, enhancing and analyzing our dataset. 
+- Python: Cleaning, transforming, enhancing and analyzing our dataset. 
 
-SQL - Validation, and exploratory, impromptu analysis.
+- SQL: Validation, and exploratory, impromptu analysis.
 
-Tableau for Visualization and Dashboard creation. 
+- Tableau: Visualization and Dashboard creation. 
 
 <div align="center"> 
   
