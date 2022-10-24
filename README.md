@@ -38,7 +38,8 @@ Initially- The dataset contains; a unique trip ID. bike type, trip start & end t
 
 We completed our data cleaning and processing work in Python, with the pandas and numpy libraries. 
 
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/956400c3-f74a-42fd-94f6-b36b4cbef064/Untitled.png">
+<img src="https://user-images.githubusercontent.com/52307383/197649632-c3587abe-54f2-4b13-8625-70d9bf1bf5f5.png">
+<img src="https://user-images.githubusercontent.com/52307383/197649649-94be0e94-761e-4926-855a-3b538b3ef69d.png">
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/956400c3-f74a-42fd-94f6-b36b4cbef064/Untitled.png)
 
@@ -47,7 +48,7 @@ We completed our data cleaning and processing work in Python, with the pandas an
 After importing our data we explored each set to confirm column names and data types were compatible. Once confirmed, we merged all 12 sets.
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/073aee04-129b-461a-8c1e-4c3c7610a7d6/Untitled.png)
-
+<img src="">
 ## Cleaning
 
 - Started with confirming the data types of our columns.
