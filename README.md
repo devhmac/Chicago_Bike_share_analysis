@@ -36,6 +36,8 @@ Initially- The dataset contains; a unique trip ID. bike type, trip start & end t
 
 We completed our data cleaning and processing work in Python, with the pandas and numpy libraries. 
 
+<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/956400c3-f74a-42fd-94f6-b36b4cbef064/Untitled.png">
+
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/956400c3-f74a-42fd-94f6-b36b4cbef064/Untitled.png)
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/acf6d6aa-e48f-4f1b-b0e3-a58a490a4afb/Untitled.png)
