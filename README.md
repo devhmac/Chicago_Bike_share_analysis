@@ -11,6 +11,7 @@ This project utilized various technologies to clean, manipulate, transform, anal
 <div align="center"> 
   
 ## [Tableau Dashboard linked here](https://public.tableau.com/app/profile/devmac/viz/ChicagoBikeShareAnalysis/BikeUsageDashboard) 
+### [Code linked here](https://github.com/devhmac/Chicago_Bike_share_analysis/blob/main/chicago_bike_share_analysis.ipynb)
   
 </div>
 
